@@ -12,6 +12,7 @@ import os
 
 def download_youtube_video(video_url, save_path):
     try:
+        os.makedirs(save_path, exist_ok=True)
         yt = YouTube(video_url)
         stream = yt.streams.filter(file_extension='mp4').order_by('resolution').desc().first()
         if stream:
@@ -23,6 +24,7 @@ def download_youtube_video(video_url, save_path):
     return None
     
 def download_vimeo_video(video_url, save_path):
+    os.makedirs(save_path, exist_ok=True)
     filename = video_url.split("/")[-1] + ".mp4"  # Simple filename based on URL
     full_path = os.path.join(save_path, filename)
     command = ['yt-dlp', video_url, '-o', full_path]
@@ -36,6 +38,7 @@ def download_vimeo_video(video_url, save_path):
 
 def download_mp4_video(video_url, save_path):
     try:
+        os.makedirs(save_path, exist_ok=True)
         filename = video_url.split("/")[-1]
         full_path = os.path.join(save_path, filename)
         response = requests.get(video_url, stream=True)
