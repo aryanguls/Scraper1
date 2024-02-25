@@ -1,5 +1,5 @@
 # pika_takeHome1
-Data Scrapping
+Scrapping video from the website
 
 To Run - 
 1. Clone repo 
