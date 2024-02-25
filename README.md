@@ -3,5 +3,6 @@ Scrapping video from the website
 
 To Run - 
 1. Clone repo 
-2. In the repo directory create a folder - AdsOfTheWorld
-3. Run finalVideoScrapper.py to see the videos populate in the AdsOfTheWorld directory and all the metadata in the video_data.json file.
+2. Run "python finalVideoScrapper.py".
+3. The user is prompted to enter either a number of campaigns they'd want to look at or enter ALL in case you want it to go through every campaign on the website.
+4. Script runs to populate a folder AdsOfTheWorld with the videos and a video_data.son for the corresponding metadata. 
